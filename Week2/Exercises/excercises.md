@@ -86,3 +86,19 @@ This example illustrates how attackers can exploit the use of small subgroups in
 - Hence, Eve now knows that Alice's private key is 3 with minimum effort.
 
 Notice: In different system and setups, we need to perform different mathematical operations on deducing the subgroups resulting in a subgroup of a few elements, so as an attacker we can try with Brute Force trying to solve the hard problems with hit and trial in that subgraoup and bypass the security.
+
+# The BLS12-381 elliptic curve is given by the equation $y^2 = x^3 + 4$ and defined over $\mathbb{F}_p$ with p = 0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab. The group generator is given by the point p1 = (0x04, 0x0a989badd40d6212b33cffc3f3763e9bc760f988c9926b26da9dd85e928483446346b8ed00e1de5d5ea93e354abe706c) and the cofactor is $h_1 = 0x396c8c005555e1568c00aaab0000aaab$. Find the generator $g$ of the subgroup of order r = 0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001.  
+
+To find the generator _g_ of the subgroup of order _r_ in the BLS12-381 curve, we can use this approach:
+
+### Confirm subgroup details:  
+
+- The main curve BLS12-381 is defined over a _finite field $\mathbb{F}_p$ with p = 0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab_ .
+- Curve equation is _y^2 = x^3 + 4_
+- A generator of the curve _p1_ and the cofactor _h1_ are given. The curve's full group order _n_ can be computed as _n = h1 x r_
+
+### Computing the generator of the subgroup:
+
+- The generator _g_ of the subgroup of order _r_ can be computed from the provided generator _p1_ of the full group by multiplying it by the cofactor _h1_
+​- Since the full group order is _n = h1 x r_, multiplying _p1_ by _h1_ should yield a point in the subgroup of order _r: g = [h1].p1_
+- This multiplication "filters out" the rest of the curve's group, effectively mapping _p1_ to the smaller subgroup _r_.
