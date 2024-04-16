@@ -98,4 +98,33 @@ And here, the group operation is multiplication modulo 29.
 
 Subgroup of Order 28: Finally, the entire group $Z_{29}^\star$ itself is also a subgroup.
 
-# What are the applications of the Chinese Remainder Theorem in Cryptography?
+# What are the applications of the Chinese Remainder Theorem in Cryptography?  
+
+_Let's first understand the system of simultaneous congruences_  
+
+- System of Simultaneous Congruences
+A system of simultaneous congruences consists of several equations where each specifies that a number (often the same number) when divided by several integers (the moduli) leaves specific remainders. These systems are fundamental in number theory and are used to find a number that satisfies multiple conditions at once with respect to different moduli. Used in RSA, where operations on large numbers are performed under different moduli. Another example is in scheduling algorithms, where tasks need to be scheduled at intervals that satisfy multiple constraints simultaneously, ensuring no overlap or ensuring synchronization across different systems.
+
+### Successive Substitutions
+Successive substitutions is one of the solution for System of Simultaneous Congruences, involves taking the solution from one congruence and substituting it into the next to reduce the problem progressively. For instance if you have:
+x ≡ a mod (m) , You might express _x as mk+a_ and substitute this into another congruence:
+x ≡ b mod (n) , This method iteratively narrows down the possible values of _x_.
+
+## Chinese Remainder Theorem (CRT) : _powerful when the moduli are pairwise coprime_
+The Chinese Remainder Theorem is a powerful tool in number theory used to solve systems of simultaneous linear congruences where the moduli are pairwise coprime (i.e., each pair of moduli has no common divisor other than 1).
+- The general solution involves:
+Finding the modular inverse of each modulus with respect to the others.
+Constructing the solution using a linear combination of the terms, weighted by these inverses.
+
+- So, if you have :
+x ≡ a (mod m)
+x ≡ b (mod n)
+and _m_ and _n_ are _coprime_, then there is a unique solution modulo _mn_.
+
+- Then first calculate _n′_ and _m'_ such that:
+_nn′ ≡ 1 (modm)_ and _mm′ ≡ 1(modn)_.
+
+- Now the solution can be constructed as:
+_x ≡ (an′n+bmm′)(modmn)_, where n'n and m′m are scaled by the remainders from the other equations to ensure the system's constraints are met.
+
+CRT is used in many applications such as calculating least common multiples, solving puzzle games like "Lights Out", and more sophisticated cryptographic protocols where several conditions must be satisfied simultaneously under different moduli.
