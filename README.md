@@ -96,3 +96,149 @@ r = 0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001.
 ### Issue
 
 - [Implement Stockham FFT](http://wwwa.pikara.ne.jp/okojisan/otfft-en/stockham1.html)
+
+## Week 4: STARKs
+
+### Recommended material
+
+- [STARKs by Sparkling Water Bootcamp](https://www.youtube.com/watch?v=cDzTm3clrEo)
+- [Lambdaworks Docs](https://github.com/lambdaclass/lambdaworks/tree/main/docs/src/starks)
+- [Stark 101](https://github.com/starkware-industries/stark101)
+- [Constraints](https://blog.lambdaclass.com/periodic-constraints-and-recursion-in-zk-starks/)
+- [Stark 101 - rs](https://github.com/lambdaclass/stark101-rs/)
+- [Anatomy of a STARK](https://aszepieniec.github.io/stark-anatomy/)
+- [BrainSTARK](https://aszepieniec.github.io/stark-brainfuck/)
+- [A summary on FRI low degree testing](https://eprint.iacr.org/2022/1216)
+- [STARKs by Risc0](https://dev.risczero.com/reference-docs/about-starks)
+
+### Exercises
+
+- Complete STARK-101
+
+## Week 5: Symmetric encryption
+
+### Recommended material
+
+- [One time pad - Dan Boneh](https://www.youtube.com/watch?v=pQkyFJp2eUg&list=PL58C6Q25sEEHXvACYxiav_lC2DqSlC7Og&index=6)
+- [Stream ciphers and pseudorandom generators - Dan Boneh](https://www.youtube.com/watch?v=ZSjTMSvp-eI&list=PL58C6Q25sEEHXvACYxiav_lC2DqSlC7Og&index=7)
+- [Attacks - Dan Boneh](https://www.youtube.com/watch?v=Qm8fycVt5v8&list=PL58C6Q25sEEHXvACYxiav_lC2DqSlC7Og&index=8)
+- [Semantic security - Dan Boneh](https://www.youtube.com/watch?v=6LFyXO58F4A&list=PL58C6Q25sEEHXvACYxiav_lC2DqSlC7Og&index=11)
+- [Block ciphers - Dan Boneh](https://www.youtube.com/watch?v=dzoqxqfpZB4&list=PL58C6Q25sEEHXvACYxiav_lC2DqSlC7Og&index=35)
+- [Serious Cryptography](https://books.google.com.ar/books/about/Serious_Cryptography.html?id=1D-QEAAAQBAJ&source=kp_book_description&redir_esc=y) - Chapters 3 - 5.
+
+### Supplementary material
+
+- [AES - NIST](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.197.pdf)
+
+### Exercises
+
+- Implement AES round function
+
+### Side project - Multilinear polynomials
+
+- [Proofs, Args and ZK](https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf)
+
+### Mandatory task
+
+- Choose a project: STARKs, Sumcheck protocol or Groth16 (or propose a new project)
+
+### Additional resources for each project
+
+- STARKs: see week 4.
+- [Groth16](https://eprint.iacr.org/2016/260.pdf)
+- [DIZK - Groth 16](https://eprint.iacr.org/2018/691.pdf)
+- [Multilinear polynomials and sumcheck protocol](https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf)
+
+#### Challenges
+
+- Implement a multilinear polynomial type with all the basic operations.
+
+## Week 6: Interactive proofs and SNARKs
+
+- [Moonmath](https://leastauthority.com/community-matters/moonmath-manual/) Chapters 6 - 8.
+- [Proofs, Arguments and Zero Knowledge](https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf) Chapters 1 - 5.
+- [Overview of modern SNARK constructions](https://www.youtube.com/watch?v=bGEXYpt3sj0)
+- [Pinocchio protocol overview](https://www.zeroknowledgeblog.com/index.php/zk-snarks)
+- [Pinocchio implementation](https://github.com/lambdaclass/pinocchio_lambda_vm)
+- [SNARKs and STARKs](https://zkhack.dev/whiteboard/module-four/)
+
+### Additional material on some proof systems
+
+- [EthSTARK](https://github.com/starkware-libs/ethSTARK/tree/master)
+- [EthSTARK - paper](https://eprint.iacr.org/2021/582)
+- [STARK paper](https://eprint.iacr.org/2018/046.pdf)
+- [DEEP FRI](https://eprint.iacr.org/2019/336)
+- [Proximity gaps](https://eprint.iacr.org/2020/654)
+- [STARKs by Eli Ben-Sasson I](https://www.youtube.com/watch?v=9VuZvdxFZQo)
+- [STARKs by Eli Ben-Sasson II](https://www.youtube.com/watch?v=L7tZeO8ihcQ)
+
+## Week 7: Plonk
+
+- [Plonk](https://eprint.iacr.org/2019/953)
+- [Custom gates](https://zkhack.dev/whiteboard/module-five/)
+- [Plonk by hand](https://research.metastate.dev/plonk-by-hand-part-1/)
+- [Plonk docs in Lambdaworks](https://github.com/lambdaclass/lambdaworks/tree/main/docs/src/plonk)
+
+## Week 8: Lookup arguments
+
+- [Plookup](https://eprint.iacr.org/2020/315.pdf)
+- [LogUp and GKR](https://eprint.iacr.org/2023/1284.pdf)
+- [Neptune - Permutation Argument](https://neptune.cash/learn/tvm-cross-table-args/)
+- [Randomized AIR with preprocessing](https://hackmd.io/@aztec-network/plonk-arithmetiization-air)
+- [PlonkUp](https://eprint.iacr.org/2022/086.pdf)
+- [Lookups by Ingonyama](https://medium.com/@ingonyama/a-brief-history-of-lookup-arguments-a4eeeeca2749)
+- [LogUp](https://eprint.iacr.org/2022/1530.pdf)
+- [Lookups - Halo2](https://zcash.github.io/halo2/design/proving-system/lookup.html)
+
+## Week 9: Signatures
+
+- [BLS signatures](https://www.ietf.org/archive/id/draft-irtf-cfrg-bls-signature-05.html#name-introduction-2)
+- [Real World Cryptography](https://books.google.com.ar/books/about/Real_World_Cryptography.html?id=Qd5CEAAAQBAJ&source=kp_book_description&redir_esc=y) Chapter 7
+- [ECDSA](https://www.rfc-editor.org/rfc/rfc6605.txt)
+- [RSA Signature](https://www.ietf.org/rfc/rfc8017.html#section-5.2)
+
+## Week 10: Folding schemes
+
+- [Nova by Justin Drake](https://zkhack.dev/whiteboard/module-fourteen/)
+- [Nova](https://eprint.iacr.org/2021/370)
+- [SuperNova](https://eprint.iacr.org/2022/1758)
+- [ProtoStar](https://eprint.iacr.org/2023/620)
+- [ProtoGalaxy](https://eprint.iacr.org/2023/1106)
+
+## Projects
+
+- Implement IPA commitment scheme
+- Implement Jacobian coordinates for Elliptic Curves
+- Benchmark elliptic curve operations
+- Add improvements to fixed base scalar multiplication in Elliptic Curves
+- Add BN254 elliptic curve
+- Implement Pasta curves
+- Implement Lookup arguments for Plonk (Plookup)
+- Sumcheck protocol
+- Benchmark and optimize multilinear polynomial operations
+- Import circuits from gnark or circom to use with Groth16 backend
+
+### Links to repos with solutions to the exercises
+- [Naïve ECC](https://github.com/saitunc/naive_ecc)
+- [Crypto](https://github.com/irfanbozkurt/crypto)
+- [Naïve RSA](https://github.com/WiseMrMusa/rsa-naive)
+- [Naïve RSA](https://github.com/Elvis339/naive_rsa)
+- [Exercises from weeks 1 & 2](https://github.com/ArpitxGit/sparkling_water_bootcamp/tree/main)
+- [Programming bitcoin EC](https://github.com/Elvis339/rbtc)
+- [Shamir secret sharing](https://github.com/cliraa/shamir_secret_sharing)
+- [Several exercises](https://github.com/ArpitxGit/sparkling_water_bootcamp/tree/main)
+
+### Intended Roadmap
+
+- Finite Fields
+- Elliptic Curves
+- Polynomials
+- Extension fields
+- Pairings
+- Public key encryption
+- Symmetric encryption
+- Hash functions
+- Signatures
+- Authenticated encryption
+- SNARKs
+- STARKs
